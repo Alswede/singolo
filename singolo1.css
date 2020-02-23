@@ -38,7 +38,11 @@
     font-family: "Lato Black";
     src: url("assets/fonts/Lato-Black.ttf") format("truetype");
 }
-
+* {
+    margin: 0;
+    font-family: "Lato Regular", sans-serif;
+    font-weight: normal;
+}
 .wrapper{
     max-width: 1020px;
     margin: auto;
@@ -159,20 +163,20 @@ header {
     overflow: hidden;
 }
 
-.services-item {
+.profit-services__item {
     display: grid;
     grid-column-gap: 20px;
     grid-template-columns: 60px 1fr;
 }
 
-.item-description h3 {
+.service-description h3 {
     font-size: 18px;
     font-family: "Lato Bold", sans-serif;
     padding-bottom: 8px;
     text-transform: capitalize;
 }
 
-.item-description p {
+.service-description p {
     font-size: 12px;
     line-height: 22px;
     text-align: justify;
