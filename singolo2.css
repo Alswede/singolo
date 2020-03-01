@@ -88,5 +88,76 @@
 .selector-button, .selector-tab:hover {
     border: 1px solid #c5c5c5;
 	  color: #dedede;;
-    transition: .3s;
+    transition: .2s;
+}
+
+.portfolio-examples {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    max-height: 601px;
+    overflow: hidden;   
+}
+
+.portfolio-examples div {
+    height: 187px;
+    overflow: hidden;
+}
+
+.about-us {
+    max-width: 1020px;
+    margin: auto;
+    padding: 61px 40px 66px;
+    box-sizing: border-box;
+    color: #666d89;
+    background-color: #f2f2f2;;
+    border-bottom: solid 6px #ffffff;
+}
+
+.our-persons {
+    margin-top: 46px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    align-items: center;  
+}
+
+.person{
+    overflow: hidden;
+}
+
+.person-photo {
+    width: 300px;
+    height: 300px;
+}
+
+.person h3 {
+    white-space: nowrap;
+    font-family: "Lato Bold", sans-serif;
+    font-size: 18px;
+    padding-top: 11px;
+    letter-spacing: -.02;
+}
+
+.person p {
+    padding-top: 9px;
+    font-size: 12px;
+    line-height: 22px;
+    text-align: justify;
+}
+
+.person-contact {
+    display: flex;
+    margin-top: 21px;
+}
+
+.person-contact img {
+    padding-right: 5px;
+    cursor: pointer;
+}
+
+.person-contact img:hover {
+    transition: .18s;
+    filter: brightness(30%);
 }
