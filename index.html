@@ -13,25 +13,31 @@
                 <h1>SINGOLO<span>*</span></h1>
             </div>
             <nav class="navigation">
-                <ul>
-                    <li> <a class="home" href="#">HOME<span>·</span></a></li>
-                    <li><a href="#">SERVICES<span>·</span></a></li>
-                    <li><a href="#">PORTFOLIO<span>·</span></a></li>
-                    <li><a href="#">ABOUT<span>·</span></a></li>
-                    <li><a href="#">CONTACT</a></li>
+                <ul id= "nav-tabs">
+                    <li> <a class="active-menu" href="#">HOME</a><span>·</span></li>
+                    <li><a href="#services">SERVICES</a><span>·</span></li>
+                    <li><a href="#portfolio">PORTFOLIO</a><span>·</span></li>
+                    <li><a href="#about">ABOUT</a><span>·</span></li>
+                    <li><a href="#contact">CONTACT</a></li>
                 </ul>
             </nav>
         </header>
         <main>
-            <section class="slider">
-                <button class="prev"><img src="assets/images/Chev_prev.svg" alt="Button previous-left"></button>
+            <section id = "home" class="slider">
+			<div class = "sliders-content">
+			<div  class = "slide active first">
+                    <img src="assets/images/slide1_red.png" alt="Picture Slide1 Red Background">			
+                    <img id = "blackscreen-right" class="screen right" src="assets/images/blackscreen.png" alt="Picture blackscreen of Iphone">
+                    <img id = "blackscreen-left"  class="screen left" src="assets/images/blackscreen.png" alt="Picture blackscreen of Iphone">			
                 <div class="slide">
-                    <img class="phone-vertical" src="assets/images/iphone_vertical.png" alt="Picture Iphone vertical pos">
-                    <img class="phone-horizontal" src="assets/images/iphone_horizontal.png" alt="Picture Iphone horizont pos">
-                </div>               
-                <button class="next"><img src="assets/images/Chev_next.svg" alt="Button next-right"></button>
+                    <img src="assets/images/slide2_blue.png" alt="Picture Slide2 Blue Background">
+                </div>    
+				</div>
+                <button class="select-but prev-but"><img src="assets/images/Chev_prev.svg" alt="Button previous-left"></button>				
+                <button class="select-but next-but"><img src="assets/images/Chev_next.svg" alt="Button next-right"></button>
             </section>
-            <section class="services">
+            
+            <section id = "services" class="services">
                 <div class="our-services">
                     <h2>Our Services</h2>
                     <p>
@@ -99,19 +105,18 @@
             </div>                  
             </section>
 
-      
-	   <section class="header">
+	   <section id = "portfolio" class="header">
         <div class="portfolio-header">
             <h2>Portfolio</h2>
             <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
         </div>
-        <div class="selector">
+        <div class="selector" id ="selector">
             <button class="selector-tab selector-button">All</button>
             <button class="selector-tab">Web Design</button>
             <button class="selector-tab">Graphic Design</button>
             <button class="selector-tab">Artwork</button>
         </div>
-        <div class="portfolio-examples">
+        <div class="portfolio-examples" id ="portfolio-content">
             <div><img src="assets\images\portfolio-1.png" alt="Picture of example portfolio (1)"></div>
             <div><img src="assets\images\portfolio-2.png" alt="Picture of example portfolio (2)"></div>
             <div><img src="assets\images\portfolio-3.png" alt="Picture of example portfolio (3)"></div>
@@ -126,7 +131,8 @@
             <div><img src="assets\images\portfolio-12.png" alt="Picture of example portfolio (12)"></div>
         </div>
     </section>
-    <section class="about-us">
+                   
+    <section id = "about" class="about-us">
         <div class="about-us-header">
             <h2>About Us</h2>
             <p>
@@ -180,8 +186,9 @@
             </div>
         </div>
     </section>
-
-    <section class="quote">
+            
+    <a name="contact"></a>
+    <section id = "contact" class="quote">
         <div class="quote-header">
             <h2>Get a Quote</h2>
             <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. 
@@ -190,12 +197,12 @@
             </p>
         </div>
         <div class="quote-form">
-            <form action="" class="input-form" method="post">
+            <form id="form" action="" class="form" method="post">
                 <input id="name-input" type="text" name="name" placeholder="Name (Required)" required>
                 <input id="email-input" type="email" name="email" placeholder="Email (Required)" required>
                 <input id="subject-input" type="text" name="subject" placeholder="Subject">
                 <textarea id="description" type="text" name="description" placeholder="Describe your project in detail..."></textarea>
-                <button class = "button-submit" type="submit">Submit</button>
+                <button class = "button-submit" id = "button-submit"type="submit">Submit</button>
             </form>
             <div class="contact-info">
                 <h3>Contact Information</h3>
@@ -211,6 +218,18 @@
                 
             </div>
         </div>
+        
+             <div id="message-sender" class="hidden">
+                <div id="message">
+                    <h3>The Message was sent</h3>
+                    <p id="message-subject"></p>
+                    <p id="message-decription"></p>
+                    <div class="wrapper">
+                        <button class="button-close" id="button-close">OK</button>
+                    </div>
+                </div>
+            </div>
+        
     </section>
 	</main>
     <footer>
@@ -224,5 +243,6 @@
             <a href="#"><img src="assets\images\contact-linkedin_icon.svg" alt="LinkedIn contact"></a>			
         </div>
     </footer>
+	    <script src="script.js"></script>
 </body>
 </html>
