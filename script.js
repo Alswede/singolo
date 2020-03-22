@@ -1,7 +1,7 @@
-const MENU_LINKS = document.querySelectorAll('#menu a');
+const MENU = document.querySelectorAll('#menu a');
 const LEFT_PHONE = document.getElementById('blackscreen-left');
 const RIGHT_PHONE = document.getElementById('blackscreen-right');
-const FILTER = document.getElementById('selector');
+/*const FILTER = document.getElementById('selector');
 const PORTFOLIO = document.getElementById('portfolio-examples');
 const FORM = document.getElementById('form');
 const MESSAGE_BLOCK = document.getElementById('message');
@@ -16,7 +16,7 @@ function onScroll(event) {
 
     sections.forEach(el => {
         if (el.offsetTop - header.offsetHeight < position && el.offsetTop + el.offsetHeight >= position) {
-            MENU_LINKS.forEach(a => {
+            MENU.forEach(a => {
                 a.classList.remove('active-menu');
                 if (el.getAttribute('id') === a.innerText.toLowerCase()) {
                     a.classList.add('active-menu');
@@ -26,11 +26,11 @@ function onScroll(event) {
     })
 }
 
-
+*/
 LEFT_PHONE.addEventListener('click', () => event.target.style.opacity = event.target.style.opacity == 0 ? 1 : 0);
 RIGHT_PHONE.addEventListener('click', () => event.target.style.opacity = event.target.style.opacity == 0 ? 1 : 0);
 
-
+/*
 FILTER.addEventListener('click', () => {
     if (event.target.tagName === 'BUTTON') {
         FILTER.querySelectorAll('button').forEach(el => el.classList.remove('selector-button'));
@@ -69,7 +69,7 @@ function changePortfolio() {
     last.after(first);
 }
 
-
+*/
 let slides = document.querySelectorAll('.slider .slide');
 let currentSlide = 0;
 let isEnabled = true;
