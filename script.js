@@ -1,19 +1,21 @@
-const MENU = document.querySelectorAll('#menu a');
+const MENU = document.querySelectorAll('#nav-tabs a');
 const LEFT_PHONE = document.getElementById('blackscreen-left');
 const RIGHT_PHONE = document.getElementById('blackscreen-right');
-/*const FILTER = document.getElementById('selector');
+const FILTER = document.getElementById('selector');
 const PORTFOLIO = document.getElementById('portfolio-examples');
 const FORM = document.getElementById('form');
-const MESSAGE_BLOCK = document.getElementById('message');
+const MESSAGE = document.getElementById('message-sender');
 const CLOSE = document.getElementById('button-close');
 
 document.addEventListener('scroll', onScroll);
 
+
+// TO DO: по макету вкладка Contact полностью не открываюется- имеется проблема с идеалом.
 function onScroll(event) {
     const position = window.scrollY;
     const sections = document.querySelectorAll('section');
     const header = document.querySelector('header');
-
+	
     sections.forEach(el => {
         if (el.offsetTop - header.offsetHeight < position && el.offsetTop + el.offsetHeight >= position) {
             MENU.forEach(a => {
@@ -26,11 +28,11 @@ function onScroll(event) {
     })
 }
 
-*/
+
 LEFT_PHONE.addEventListener('click', () => event.target.style.opacity = event.target.style.opacity == 0 ? 1 : 0);
 RIGHT_PHONE.addEventListener('click', () => event.target.style.opacity = event.target.style.opacity == 0 ? 1 : 0);
 
-/*
+
 FILTER.addEventListener('click', () => {
     if (event.target.tagName === 'BUTTON') {
         FILTER.querySelectorAll('button').forEach(el => el.classList.remove('selector-button'));
@@ -38,6 +40,7 @@ FILTER.addEventListener('click', () => {
         changePortfolio();
     }
 })
+
 
 PORTFOLIO.addEventListener('click', () => {
     if (event.target.tagName === 'IMG') {
@@ -52,13 +55,13 @@ FORM.addEventListener('submit', (e) => {
     const subjectText = subject.value.length > 100 ? subject.value.substring(0, 100) + '...' : subject.value;
     const descriptionText = description.value.length > 100 ? description.value.substring(0, 100) + '...' : description.value;
 
-    MESSAGE_BLOCK.classList.remove('hidden');
+    MESSAGE.classList.remove('hidden');
     document.getElementById('message-subject').innerText = subject.value ? 'Subject: ' + subjectText : 'Without subject';
-    document.getElementById('message-decription').innerText = description.value ? 'Description: ' + descriptionText : 'Without description';
+    document.getElementById('message-description').innerText = description.value ? 'Description: ' + descriptionText : 'Without description';
 })
 
 CLOSE.addEventListener('click', () => {
-    MESSAGE_BLOCK.classList.add('hidden');
+    MESSAGE.classList.add('hidden');
     document.getElementById('form').reset();
 });
 
@@ -69,7 +72,7 @@ function changePortfolio() {
     last.after(first);
 }
 
-*/
+
 let slides = document.querySelectorAll('.slider .slide');
 let currentSlide = 0;
 let isEnabled = true;
