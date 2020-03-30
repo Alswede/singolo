@@ -664,9 +664,9 @@ footer img:hover {
     filter: brightness(30%);
     transition: 0.3s;
 }
+/* конеч экрана */
 
-
-
+/* новый экран (max-width: 1019px)*/
 @media (max-width: 1019px) {
   .portfolio-content {
     grid-template-columns: 1fr 1fr 1fr;
@@ -695,9 +695,9 @@ footer img:hover {
     padding: 53px 40px 40px;
   }
 }
+ /*@конец экран ((max-width: 1019px)
 
-
-
+ /*@Новый экран (max-width: 767px */
 @media (max-width: 767px) {
   * {
     scroll-margin-top: 60px;
@@ -850,5 +850,15 @@ footer img:hover {
 
   footer {
     justify-content: center;
+  }
+}
+
+/* тут закончилось @media (max-width: 767px) , потом проверить на убирание абсолютных величин  и кнопку сенд*/
+
+@media (max-width: 374px) {
+  .filter-item {
+	font-size: 9px;
+    line-height: 14px;
+
   }
 }
