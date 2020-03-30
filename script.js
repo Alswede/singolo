@@ -7,6 +7,8 @@ const FORM = document.getElementById('form');
 const MESSAGE = document.getElementById('message-sender');
 const CLOSE = document.getElementById('button-close');
 
+const NAVIGATION = document.getElementById('navigation');
+
 document.addEventListener('scroll', onScroll);
 
 
@@ -28,6 +30,11 @@ function onScroll(event) {
     })
 }
 
+NAVIGATION.addEventListener('click', () => {
+    document.querySelector('.navigation').classList.toggle('navigation-active');
+    document.getElementById('navigation-button').classList.toggle('active');
+    document.querySelector('.navigation-block').classList.toggle('hidden');
+});
 
 LEFT_PHONE.addEventListener('click', () => event.target.style.opacity = event.target.style.opacity == 0 ? 1 : 0);
 RIGHT_PHONE.addEventListener('click', () => event.target.style.opacity = event.target.style.opacity == 0 ? 1 : 0);
@@ -111,13 +118,13 @@ function previousSlide(n) {
 }
 
 
-document.querySelector('.select-but.next-but').addEventListener('click', function () {
+document.querySelector('.select-but.prev-but').addEventListener('click', function () {
     if (isEnabled) {
         previousSlide(currentSlide);
     }
 });
 
-document.querySelector('.select-but.prev-but').addEventListener('click', function () {
+document.querySelector('.select-but.next-but').addEventListener('click', function () {
     if (isEnabled) {
         nextSlide(currentSlide);
     }

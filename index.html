@@ -9,10 +9,12 @@
 <body>
 
         <header>
+			<div class="navigation-block hidden"></div>
+            <nav class="navigation" id = "navigation" >
             <div class="logo">
+			  <img id="navigation-button" class="navigation-icon" src="assets\images\navigation-icon.svg" alt="navigation icon">
                 <h1>SINGOLO<span>*</span></h1>
             </div>
-            <nav class="navigation">
                 <ul id= "nav-tabs">
                     <li> <a class="active-menu" href="#">HOME</a><span>·</span></li>
                     <li><a href="#services">SERVICES</a><span>·</span></li>
@@ -25,15 +27,19 @@
         <main>
             <section id = "home" class="slider">
 			<div class = "sliders-content">
-			<div  class = "slide first active">
-                    <img src="assets\images\slide1_red.png" alt="Picture Slide1 Red Background">			
-                    <img id = "blackscreen-right" class="screen right" src="assets\images\blackscreen.png" alt="Picture blackscreen of Iphone">
-                    <img id = "blackscreen-left"  class="screen left" src="assets\images\blackscreen.png" alt="Picture blackscreen of Iphone">			
+				<div  class = "slide active">
+					<img class="slide-base" src="assets\images\slide1_red.png" alt="Picture Slide1 Red Background">			
+                    <div class="screen-left"> 
+						<img id = "blackscreen-left" class="screen left" src="assets\images\blackscreen.png" alt="Picture blackscreen of Iphone">
+					</div>
+					<div>
+						<img id = "blackscreen-right"  class="screen right" src="assets\images\black.png" alt="Picture blackscreen of Iphone">					
+					</div>
                 </div>
-				<div class="slide">
-                    <img src="assets\images\slide2_blue.png" alt="Picture Slide2 Blue Background">
+				<div class="slide bluescreen">
+                    <img class="slide-base" src="assets\images\slide2_blue.png" alt="Picture Slide2 Blue Background">
                 </div>
-				</div>
+			</div>
                 <button class="select-but prev-but"><img src="assets\images\Chev_prev.svg" alt="Button previous-left"></button>				
                 <button class="select-but next-but"><img src="assets\images\Chev_next.svg" alt="Button next-right"></button>
             </section>
@@ -132,37 +138,6 @@
             <div><img src="assets\images\portfolio-12.png" alt="Picture of example portfolio (12)"></div>
         </div>
     </section>        
-
-<!---
-        <section id="portfolio" class="portfolio">
-            <div class="portfolio-header">
-                <h2>Portfolio</h2>
-                <p>
-                    Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-                </p>
-            </div>
-            <div class="filter" id="filter">
-                <button class="filter-item active-filter">All</button>
-                <button class="filter-item">Web Design</button>
-                <button class="filter-item">Graphic Design</button>
-                <button class="filter-item">Artwork</button>
-            </div>
-            <div id="portfolio-images" class="projects-container">
-                <div><img src="assets\images\portfolio-1.png" alt="Image of project"></div>
-                <div><img src="assets\images\portfolio-2.png" alt="Image of project"></div>
-                <div><img src="assets\images\portfolio-3.png" alt="Image of project"></div>
-                <div><img src="assets\images\portfolio-4.png" alt="Image of project"></div>
-                <div><img src="assets\images\project-5.png" alt="Image of project"></div>
-                <div><img src="assets\images\project-6.png" alt="Image of project"></div>
-                <div><img src="assets\images\project-7.png" alt="Image of project"></div>
-                <div><img src="assets\images\project-8.png" alt="Image of project"></div>
-                <div><img src="assets\images\project-9.png" alt="Image of project"></div>
-                <div><img src="assets\images\project-10.png" alt="Image of project"></div>
-                <div><img src="assets\images\project-11.png" alt="Image of project"></div>
-                <div><img src="assets\images\project-12.png" alt="Image of project"></div>
-            </div>
-        </section>
-		-->	
     <section id = "about" class="about-us">
         <div class="about-us-header">
             <h2>About Us</h2>
@@ -231,8 +206,8 @@
                 <input id="name" type="text" name="name" placeholder="Name (Required)" required>
                 <input id="email" type="email" name="email" placeholder="Email (Required)" required>
                 <input id="subject" type="text" name="subject" placeholder="Subject">
-                <textarea id="description" type="text" name="description" placeholder="Describe your project in detail..."></textarea>
-                <button class = "button-submit" type="submit">Submit</button>
+                <textarea id="description" type="text" name="description" placeholder="Describe your project in detail..."></textarea> 
+				<button class = "button-submit" type="submit">Send</button>
             </form>
             <div class="info">
                 <h3>Contact Information</h3>
