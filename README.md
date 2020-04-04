@@ -1,5 +1,7 @@
 # singolo
 
+discord: Alswede
+
 [singolo](https://alswede.github.io/singolo)  
 
 [singolo1](https://alswede.github.io/singolo/singolo1) 
